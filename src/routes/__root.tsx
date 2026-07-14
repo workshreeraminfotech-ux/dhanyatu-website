@@ -140,10 +140,48 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Dhanyatu Group of Company Pvt. Ltd.",
+    alternateName: ["Dhanyatu Group", "Dhanyatu"],
+    url: "https://dhanyatupvtltd.in/",
+    logo: "https://dhanyatupvtltd.in/assets/dhanyatu-logo.png",
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+91-99244-44178",
+        contactType: "sales",
+        areaServed: "IN",
+        availableLanguage: ["en", "hi", "gu"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "+91-99245-99312",
+        contactType: "customer service",
+        areaServed: "IN",
+        availableLanguage: ["en", "hi", "gu"],
+      },
+    ],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "VAVDI GAM SR.NO.37, PLOT NO.37, SHED NO.2, OPP. SHREEJI GAU SHALA, B/H KRISHNA PARK, VAVDI",
+      addressLocality: "Rajkot",
+      addressRegion: "Gujarat",
+      postalCode: "360004",
+      addressCountry: "IN",
+    },
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+        />
       </head>
       <body>
         {children}
