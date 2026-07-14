@@ -67,8 +67,8 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: FacebookIcon, href: "https://facebook.com", label: "Facebook" },
-    { icon: InstagramIcon, href: "https://instagram.com", label: "Instagram" },
+    { icon: FacebookIcon, href: "https://www.facebook.com/share/1EQsKtTaxb/?mibextid=wwXIfr", label: "Facebook" },
+    { icon: InstagramIcon, href: "https://www.instagram.com/__dhanyatu_2025_?igsh=MXB5ZjJuM254dWNnZg==", label: "Instagram" },
   ];
 
   return (
@@ -246,7 +246,14 @@ export function Footer() {
             <span className="hidden sm:inline text-white/10">|</span>
             <span className="text-silver/60">
               Developed by{" "}
-              <span className="text-ember font-semibold tracking-wide">MatrixTechX</span>
+              <a
+                href="https://wa.me/918200712955"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ember font-semibold tracking-wide hover:underline cursor-pointer"
+              >
+                MatrixTechX
+              </a>
             </span>
           </div>
           <FooterLink
