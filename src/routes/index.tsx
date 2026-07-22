@@ -784,14 +784,16 @@ function WhyChoose() {
               <div className="absolute inset-0 bg-gradient-to-t from-graphite/40 to-transparent z-10" />
 
               {/* Floating info overlay */}
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-graphite/85 px-6 py-4 text-white backdrop-blur-md border border-white/10 z-20 shadow-xl">
-                <div className="text-[10px] font-mono uppercase tracking-widest text-silver/60">
-                  Core Pillar 0{activeIdx + 1}
+              {activeIdx !== 3 && (
+                <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-graphite/85 px-6 py-4 text-white backdrop-blur-md border border-white/10 z-20 shadow-xl">
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-silver/60">
+                    Core Pillar 0{activeIdx + 1}
+                  </div>
+                  <div className="mt-1 font-display font-bold text-base">
+                    {pillars[activeIdx].title}
+                  </div>
                 </div>
-                <div className="mt-1 font-display font-bold text-base">
-                  {pillars[activeIdx].title}
-                </div>
-              </div>
+              )}
             </div>
           </Reveal>
 
